@@ -1,0 +1,5 @@
+{
+    "size": 16593594,
+    "manifest": "mcr.azure.cn/aks/hcp/etcd-azure@sha256:e1ab76e6964f6e28910e28b667150f79ce4e35a7c5b60ef0ab48bb2f8f077b36",
+    "blob": ["mcr.azure.cn/aks/hcp/etcd-azure@sha256:0bc2f60ebab11e2311bbbccf17169edbb0434511c9ebeeaa2691b16e47be9e1c","mcr.azure.cn/aks/hcp/etcd-azure@sha256:9d48c3bd43c520dc2784e868a780e976b207cbf493eaff8c6596eb871cbd9609","mcr.azure.cn/aks/hcp/etcd-azure@sha256:5d8061a54f4f03695b66369189522f7bdc93b9026a10d194d0568286fb7d9a6d","mcr.azure.cn/aks/hcp/etcd-azure@sha256:73ccfe9b4794983ea803c18f7ceff22152152b35e8781ec9eeb09b8945afc62d","mcr.azure.cn/aks/hcp/etcd-azure@sha256:4302923581bbdb8adab0963ce94742503ac5c5735d4a0a1fb6ac29fcd58b669c","mcr.azure.cn/aks/hcp/etcd-azure@sha256:1b7f10bcf881b3c02facae5cac60c7e86d30141639ec01398440e2b7a16f66d7","mcr.azure.cn/aks/hcp/etcd-azure@sha256:6021490514c1175e6dc8f414d9303f40c924fd6a6d20c4e62450a0f9e32942ed","mcr.azure.cn/aks/hcp/etcd-azure@sha256:aa521d5fc3b04fd3b6ead55467b035af0478ce529b7ef60b181eb243463936f8","mcr.azure.cn/aks/hcp/etcd-azure@sha256:5e75f7ee913d35621c62f8a69fb84295dec41dd9950524701e70da3e497fbe53"]
+}

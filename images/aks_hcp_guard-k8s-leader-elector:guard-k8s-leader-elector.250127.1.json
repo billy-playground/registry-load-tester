@@ -1,0 +1,5 @@
+{
+    "size": 34386173,
+    "manifest": "mcr.azure.cn/aks/hcp/guard-k8s-leader-elector@sha256:cdfca96d0fd28f656111e38deee67c420610847358dd4dfdef9e7f98a88f46b2",
+    "blob": ["mcr.azure.cn/aks/hcp/guard-k8s-leader-elector@sha256:81c1d76a5f14ea9af49e0e4bd6bb1c4ccaa262cddfc51f50ea455cc5e4a28bab","mcr.azure.cn/aks/hcp/guard-k8s-leader-elector@sha256:45428f99b0ed7a7877033cd11f10c7bdaddfcded287d2a066ac16a44267ca6ea","mcr.azure.cn/aks/hcp/guard-k8s-leader-elector@sha256:3c2cba919283a210665e480bcbf943eaaf4ed87a83f02e81bb286b8bdead0e75","mcr.azure.cn/aks/hcp/guard-k8s-leader-elector@sha256:58be8ecd1797d978ecfc33a5a486c8f519a267444023cdb1a7dac48e361a64f0"]
+}

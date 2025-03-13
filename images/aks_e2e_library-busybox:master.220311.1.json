@@ -1,0 +1,5 @@
+{
+    "size": 761494,
+    "manifest": "mcr.azure.cn/aks/e2e/library-busybox@sha256:0f642742b270a4e6a3b520d133fe1396468b7ce5e2a3520e3a05174aa9a57ac7",
+    "blob": ["mcr.azure.cn/aks/e2e/library-busybox@sha256:649804a4aedeb3ecc4867157d27db9e01206a64c7df8d9b082bb4235ed622f82","mcr.azure.cn/aks/e2e/library-busybox@sha256:76df9210b28cbd4bc127844914d0a23937ed213048dc6289b2a2d4f7d675c75e","mcr.azure.cn/aks/e2e/library-busybox@sha256:3c2cba919283a210665e480bcbf943eaaf4ed87a83f02e81bb286b8bdead0e75"]
+}

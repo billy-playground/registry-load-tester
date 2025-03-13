@@ -1,0 +1,5 @@
+{
+    "size": 22213427,
+    "manifest": "mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:a448687b78d24dae388bd3d54591c179c891fa078404752bc9c9dfdaecdc02ef",
+    "blob": ["mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:e4b5452724c3a369ce9608b13c51f90a12dcbd741290eef6299da2cca2737637","mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:8e3ba11ec2a2b39ab372c60c16b421536e50e5ce64a0bc81765c2e38381bcff6","mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:000de942e1a36dcc7c3df4d5d2dc58dd1a5cbcfeedf1693c64346acd0c65a0a2","mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:e3ce11dd5800d0eee4152a87a05573bd3982002767cdb1524fbea3278fb9ab28","mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:61d5cbb8f3ad1f25507ebfbdb7dbdea1f7723e7fa91e4bdc736fa4f679fe4ecc","mcr.azure.cn/aks/hcp/kube-svc-redirect@sha256:bf100be73bdc12078abc8367dca92d45da80ddc4fd0c0742192c2122422dc683"]
+}

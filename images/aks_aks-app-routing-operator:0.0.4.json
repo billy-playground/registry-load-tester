@@ -1,0 +1,5 @@
+{
+    "size": 24858315,
+    "manifest": "mcr.azure.cn/aks/aks-app-routing-operator@sha256:ab504d2402b90c5865426bfd1e65d07de4491e3883ea2b1668315653377975ec",
+    "blob": ["mcr.azure.cn/aks/aks-app-routing-operator@sha256:10349ff3faa55f6964c4d5e753b3a170ff4f3b6653a9e6f2d98d3550311118c7","mcr.azure.cn/aks/aks-app-routing-operator@sha256:94b7f76804ff345c9ee50d21095c3c4dc26081e2df8a46c4005bfcb0dcb8c341"]
+}

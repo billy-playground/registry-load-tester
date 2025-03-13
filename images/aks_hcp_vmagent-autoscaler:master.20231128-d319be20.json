@@ -1,0 +1,5 @@
+{
+    "size": 23886455,
+    "manifest": "mcr.azure.cn/aks/hcp/vmagent-autoscaler@sha256:5e181a50373132ec3b0e2f6763feb1ad1a1da5656bf62d9d5789002956bd0eb9",
+    "blob": ["mcr.azure.cn/aks/hcp/vmagent-autoscaler@sha256:00725cf74836bebf233a2bad1497305dbbebd0f56de7bd20c66819199c1697b1","mcr.azure.cn/aks/hcp/vmagent-autoscaler@sha256:7d883a3eb1c556752c73dedf88da2c0d3943b9f5c3f763cdd7a813ca766f5486","mcr.azure.cn/aks/hcp/vmagent-autoscaler@sha256:9dc48277abcc2be6f47413e60adf75ccb74e1a682ffa6e82c5e45cb835858599"]
+}

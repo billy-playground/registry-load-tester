@@ -1,0 +1,5 @@
+{
+    "size": 45582017,
+    "manifest": "mcr.azure.cn/aks/ccp/ccp-webhook@sha256:9f56362ba01fc127aa7e85c809cbb013df03171b9d60e8751b3aecbf6531f990",
+    "blob": ["mcr.azure.cn/aks/ccp/ccp-webhook@sha256:c9addabb3a84090f393f2ad4c18ac4ac0ce58118e1adfdf0f61974048ec5efd0","mcr.azure.cn/aks/ccp/ccp-webhook@sha256:90b6222a61024d856941282245c3e009a2151951855826c8169ebafebdfef252","mcr.azure.cn/aks/ccp/ccp-webhook@sha256:eff8d7ec3e196369b691c55a52c89bf98e1cd415d9131592d71a10b32c7d88dd","mcr.azure.cn/aks/ccp/ccp-webhook@sha256:c00dcb21e9b384f391394cc091648f0b6324c0ac8cd1f093d6147c0084031ca1"]
+}

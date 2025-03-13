@@ -1,0 +1,5 @@
+{
+    "size": 10094942,
+    "manifest": "mcr.azure.cn/aks/cost-analysis/cost-analysis-scraper@sha256:8cfe2bbf979424ac08c3d0d319ed926673e0809fa86cf761236e43c67df31391",
+    "blob": ["mcr.azure.cn/aks/cost-analysis/cost-analysis-scraper@sha256:d4c1c1f9106163d8582b73e4c411adf08289132cf787ffa61d646b67132a84a5","mcr.azure.cn/aks/cost-analysis/cost-analysis-scraper@sha256:686d76d68c2c447c27cef300f10b47bbe24f7942d966d24a9ca33ed0a62a262e","mcr.azure.cn/aks/cost-analysis/cost-analysis-scraper@sha256:8159e25cbc691ce7f698a1099d983ba940f0c22177db40eb63bc5af85cdfae51"]
+}

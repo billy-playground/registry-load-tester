@@ -1,0 +1,5 @@
+{
+    "size": 73663707,
+    "manifest": "mcr.azure.cn/aks/ccp/private-connect-router@sha256:5fa14eddb468acc1a5b431448cebf309ec1efc4f6c11ddd7f9699a1479c00ccf",
+    "blob": ["mcr.azure.cn/aks/ccp/private-connect-router@sha256:3bc10439bbb4be384115aadb54a243ca688e0696a281659f3194f1eeaf192f9f","mcr.azure.cn/aks/ccp/private-connect-router@sha256:cd6c1a7b6fb56cf74074ff401d26fccce14acaddaa8ef7d62125453515d49e9e","mcr.azure.cn/aks/ccp/private-connect-router@sha256:472d35a946387e20f4b0d68ddc1719688512161820bb3bf213f6a1ed6202b262","mcr.azure.cn/aks/ccp/private-connect-router@sha256:dddbc01a08bcd76f517fc0b8ca020ef586a75ef42739af3ae8164528d1f9b5a2","mcr.azure.cn/aks/ccp/private-connect-router@sha256:9fa2b9200058a1ce97293a2f350f18d7e86b1e50ec8aa3616e7f2f0029d28992"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 25604885,
+    "manifest": "mcr.azure.cn/aks/hcp/aks-kube-addon-manager@sha256:48873693a10f09bea9449c92e8c44ab94231cad3dbb750789a30f4a42b09bad4",
+    "blob": ["mcr.azure.cn/aks/hcp/aks-kube-addon-manager@sha256:ce0df5ee864e243a9a9c8a708e15638588eaf756e88ed5caa046f4b784e64ff9","mcr.azure.cn/aks/hcp/aks-kube-addon-manager@sha256:6c00346bc64826643241ff41090b28f58463a130d318187f360496bd140d6c96","mcr.azure.cn/aks/hcp/aks-kube-addon-manager@sha256:f49766a80b7aa77bba59119a5dca5147c62318fd84c89cd41003394c01ec0192","mcr.azure.cn/aks/hcp/aks-kube-addon-manager@sha256:4f0527fdf49997c1fc172d5f53363b1acab861611eb6f7e848ad22159217a8ad"]
+}

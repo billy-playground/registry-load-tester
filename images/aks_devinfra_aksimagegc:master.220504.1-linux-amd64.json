@@ -1,0 +1,5 @@
+{
+    "size": 39649511,
+    "manifest": "mcr.azure.cn/aks/devinfra/aksimagegc@sha256:f8b1d55bf684e60ddff0fd0cf73c5bff7f4dba89e20ce2df167c9006c2ae52c7",
+    "blob": ["mcr.azure.cn/aks/devinfra/aksimagegc@sha256:f05f8fda2dde0f8d2915f3d9d0d77bdfd4b66cbbbb302e221803fa6c9f2e9516","mcr.azure.cn/aks/devinfra/aksimagegc@sha256:cd6c1a7b6fb56cf74074ff401d26fccce14acaddaa8ef7d62125453515d49e9e","mcr.azure.cn/aks/devinfra/aksimagegc@sha256:4c85c0ed4661aeb80eac897b54ba4c1e4f0dd6260367778d9946245c1e1c30f9"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 31544685,
+    "manifest": "mcr.azure.cn/aks/fleet/fleet-workload@sha256:ae58705e81ca3368ac229bb992a9344d2520e4c4ea5773d1ee60dac1e78c6e01",
+    "blob": ["mcr.azure.cn/aks/fleet/fleet-workload@sha256:47d383738427e6c9d7dab1f78a5ba1d8d9a01d1e155369e9f5f9dd86a8fc12d7","mcr.azure.cn/aks/fleet/fleet-workload@sha256:36698cfa5275e0bda70b0f864b7b174e0758ca122d8c6a54fb329d70082c73f8","mcr.azure.cn/aks/fleet/fleet-workload@sha256:63186d32234e6ca9751e21f84bda2a6f5025eb3a44196f6dc4d0e9268ba7bbe0","mcr.azure.cn/aks/fleet/fleet-workload@sha256:76281016428f3d46193d753857f315aa6bc657b46bd9fb35619361bec80a9291"]
+}

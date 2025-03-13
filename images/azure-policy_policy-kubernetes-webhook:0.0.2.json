@@ -1,0 +1,5 @@
+{
+    "size": 21617395,
+    "manifest": "mcr.azure.cn/azure-policy/policy-kubernetes-webhook@sha256:8c0861cd9ce8c7a44a48de535026b6d42a93a3cf8e79e0f00e506d98cfce077b",
+    "blob": ["mcr.azure.cn/azure-policy/policy-kubernetes-webhook@sha256:cee5fc8ef6b3b50302ed68be2ceb217458f7e8ac99fd186e5dca0015c5e66aa8","mcr.azure.cn/azure-policy/policy-kubernetes-webhook@sha256:59bf1c3509f33515622619af21ed55bbe26d24913cedbca106468a5fb37a50c3","mcr.azure.cn/azure-policy/policy-kubernetes-webhook@sha256:4568bb4934cd8edfab9bfdb9f576ffc5630024e48ed6496d19bb9e00a69f2889","mcr.azure.cn/azure-policy/policy-kubernetes-webhook@sha256:ff3d90fb793a0450bd04beed94863d7f1ba03dac0f6efc978f9011e003bc8695"]
+}

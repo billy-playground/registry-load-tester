@@ -1,0 +1,5 @@
+{
+    "size": 6204683,
+    "manifest": "mcr.azure.cn/aks/hcp/vmagent-proxy@sha256:656dc1fea17b73e2591bc14be6a7488320ba199204fb269f4ffe7f92e04d8b1b",
+    "blob": ["mcr.azure.cn/aks/hcp/vmagent-proxy@sha256:670df23a54cf4be086a629811222d0cb813250947bfe0cb0963f789dc41867c4","mcr.azure.cn/aks/hcp/vmagent-proxy@sha256:7d883a3eb1c556752c73dedf88da2c0d3943b9f5c3f763cdd7a813ca766f5486","mcr.azure.cn/aks/hcp/vmagent-proxy@sha256:7e70b3a1fb149d9de06374bdb6736640727be42afa2a33b7820a355c7aff5d76"]
+}

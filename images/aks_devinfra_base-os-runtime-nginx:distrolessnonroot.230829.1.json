@@ -1,0 +1,5 @@
+{
+    "size": 10223201,
+    "manifest": "mcr.azure.cn/aks/devinfra/base-os-runtime-nginx@sha256:cfb2770fd9db3fe7c12fe6e7296566df487f7a408b24774cfd82d5402c85aa61",
+    "blob": ["mcr.azure.cn/aks/devinfra/base-os-runtime-nginx@sha256:2ccacac07e3403936123a36ee796d235908e399a3a233f52382ab2e8b38161e5","mcr.azure.cn/aks/devinfra/base-os-runtime-nginx@sha256:686d76d68c2c447c27cef300f10b47bbe24f7942d966d24a9ca33ed0a62a262e","mcr.azure.cn/aks/devinfra/base-os-runtime-nginx@sha256:bbe4d43a9aab1cee376d95d88e9f017e1f60971f2745fa9327a351062ca2ab9f","mcr.azure.cn/aks/devinfra/base-os-runtime-nginx@sha256:7ef407aac97006840e38d250eff63af4e3a8d78451b474d67747fcbf9dd73e7e"]
+}

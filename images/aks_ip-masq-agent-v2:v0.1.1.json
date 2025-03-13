@@ -1,0 +1,5 @@
+{
+    "size": 31269605,
+    "manifest": "mcr.azure.cn/aks/ip-masq-agent-v2@sha256:0cce52158bc47305d3a08de4d6a3a88b608f4d4b7d5dac3312f4460acb6bb490",
+    "blob": ["mcr.azure.cn/aks/ip-masq-agent-v2@sha256:e1f4d85aaf960c2832936278042069791ac48c631149abbf933fb01469c9cab1","mcr.azure.cn/aks/ip-masq-agent-v2@sha256:2611ce13f6e079376b810ed98b744dfda28a9f259e503516d35c4ac2873885f5","mcr.azure.cn/aks/ip-masq-agent-v2@sha256:d9c824a47c4e38d14bc24fe77549b1ee830e36962a390525fbe8ad23ae270184","mcr.azure.cn/aks/ip-masq-agent-v2@sha256:c08e26a86e9f42f57e3ace67c67f459bba9c58358465e024f0fd8e8e82cb303a"]
+}

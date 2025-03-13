@@ -1,0 +1,5 @@
+{
+    "size": 22632889,
+    "manifest": "mcr.azure.cn/aks/webhook-tls-manager@sha256:1e5fe0e083b898d18ac5a175201aa24f847d1f82b427bcc677163a0a45c7f2a5",
+    "blob": ["mcr.azure.cn/aks/webhook-tls-manager@sha256:aa3a9d1c5f5c136ab026c9d6226af8e1e0795c37a797235008914a6d193fd4d5","mcr.azure.cn/aks/webhook-tls-manager@sha256:f5cde4e7cc958000f26d04f2e2a29cf48f1af47e3eef0c47fa7b7bf5e330562a"]
+}

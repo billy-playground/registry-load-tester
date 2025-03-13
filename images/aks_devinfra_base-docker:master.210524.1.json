@@ -1,0 +1,5 @@
+{
+    "size": 191315108,
+    "manifest": "mcr.azure.cn/aks/devinfra/base-docker@sha256:dfa2189da8e9cc15e03c75b5265f41993173d2784d6ab872bbb6c354656a3ca2",
+    "blob": ["mcr.azure.cn/aks/devinfra/base-docker@sha256:76e4e446d2aca74a775d08379361d1251715b7d9fc304a4355fff88a4602b26e","mcr.azure.cn/aks/devinfra/base-docker@sha256:01bf7da0a88c9e37ae418d17c0aeed0621524848d80ccb9e38c67e7ab8e11928","mcr.azure.cn/aks/devinfra/base-docker@sha256:f3b4a5f15c7a0722b4f22e61b5387317eaf2602c27ffb2bceac9a25f19fbd156","mcr.azure.cn/aks/devinfra/base-docker@sha256:57ffbe87baa135002dddb7a7460082c5d6a352186e1be9464c5f31db81378824","mcr.azure.cn/aks/devinfra/base-docker@sha256:8154140f3f84e62c7ecd307f6fa2fbbed8af14d3cb449d37204824040c14917c","mcr.azure.cn/aks/devinfra/base-docker@sha256:1495d9b902ac516eb06ced1ec0ed791fa6896dfb2a63a9befadd69982677b3ba","mcr.azure.cn/aks/devinfra/base-docker@sha256:c4b28a3800578fd12526e5757c5c37dd4397cad85ac24ad6a5ba3505bc900ad6","mcr.azure.cn/aks/devinfra/base-docker@sha256:b912bc010a8722a6b9db8fce9f46139e1e84c14eff3224f6b2319976a7d6f26d"]
+}

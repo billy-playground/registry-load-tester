@@ -1,0 +1,5 @@
+{
+    "size": 19707010,
+    "manifest": "mcr.azure.cn/aks/fleet/member-agent@sha256:05a7f92d629a3be547541c0bd644e9c3a004905f901d03267606f10f76e13f6d",
+    "blob": ["mcr.azure.cn/aks/fleet/member-agent@sha256:5543528d6d228d8e711a998ed3f8f08f847c658d0f93df0e7bbd6271fa33a45e","mcr.azure.cn/aks/fleet/member-agent@sha256:b9f88661235d25835ef747dab426861d51c4e9923b92623d422d7ac58eb123e9","mcr.azure.cn/aks/fleet/member-agent@sha256:a8ff7e023e47ea5201f313e6bd4a103a52eb121c82ededb3a6b61ba9a1ba3ca8"]
+}

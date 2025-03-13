@@ -1,0 +1,5 @@
+{
+    "size": 29543978,
+    "manifest": "mcr.azure.cn/aks/command/runtime@sha256:5ae49132ebbb02550b3c4d755885b58b1ba5c541acb23aaa72d6e8fe53dcfb62",
+    "blob": ["mcr.azure.cn/aks/command/runtime@sha256:cdbb6201b3dacf6c06de47dc0c44a00ce72d3af06be621439db553e0d50db1db","mcr.azure.cn/aks/command/runtime@sha256:ba3557a56b150f9b813f9d02274d62914fd8fce120dd374d9ee17b87cf1d277d","mcr.azure.cn/aks/command/runtime@sha256:665ac691a1dfe3ed43e7b0ad8bf2053eae480c721ec10cd47df62aa01d4fcfe1","mcr.azure.cn/aks/command/runtime@sha256:90c059757c6ce0df24d979a5d6990a09f19fbf9921ed03e5bbdf298930f0f3fe","mcr.azure.cn/aks/command/runtime@sha256:6c5d54d80233f2faab514fdb066fefd0aa50b44cd2d09840418c1900b6898fb3","mcr.azure.cn/aks/command/runtime@sha256:5b1d7ed7d25555be014ec661e0b5cedeb6e494b2eb68354a722ba6b94d97da84"]
+}

@@ -1,0 +1,16 @@
+{
+    "size": 61213850,
+    "manifest": "mcr.azure.cn/aks/acc/sgx-attestation@sha256:778b87bd1c8f48ff2d9f47c453f4947ff5a7e3b4bed1f113740f96436f5faa7e",
+    "blob": [
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:e982b5d3300ef7a795aa724025d0c9345e54b031dbf7bf3f991a52d317d53a0a",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:f08d8e2a3ba11bea23cf5c17e8e1c620057412ed05c32d1114640e18d6dd0a43",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:3baa9cb2483bd9c5329a44d9c2fe72535625bbd4308bca95785dd58e72c06365",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:94e5ff4c0b1526abf77c236655f21c8f67a23313291c8b970fe6b469549d8153",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:1860925334f940c3145808527480b4f0cba7f01279087fdb27679e4354fba967",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:62781f86a26a1a3b03640399035710947e452f922d5de1d96c60add52e865476",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:a31ba9ea9dc24df5b2cded572919a89276c1b04a49fca731289e9884ae4106be",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:7f1c175ebdf97ab172532dd00cf7e7998b11af60ea32495414f1a021d0d8f28b",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:314cc078af6d14cbbd2bfb7501ac80277605cc891b74387234e19fe256c7748a",
+        "mcr.azure.cn/aks/acc/sgx-attestation@sha256:a68bdb0ab6205d717ff2e07293bb48f72b6231aa0e15ca5a07c0254e9d02e8f9"
+    ]
+}

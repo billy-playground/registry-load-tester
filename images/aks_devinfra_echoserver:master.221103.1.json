@@ -1,0 +1,5 @@
+{
+    "size": 4416172,
+    "manifest": "mcr.azure.cn/aks/devinfra/echoserver@sha256:27fb111ca7fc394571044806a31192dc4250a716d821c36f3fdd62c45ac8f89f",
+    "blob": ["mcr.azure.cn/aks/devinfra/echoserver@sha256:f2c14edf81b21b09b701efc47d2f13d4908be1a46b57e46b2d27b9011a93df31","mcr.azure.cn/aks/devinfra/echoserver@sha256:30a5194afcd4523213564583f7d9e4dde7a0bd59f40d0c7f94e2e11efc2f13a4","mcr.azure.cn/aks/devinfra/echoserver@sha256:1958c9e05c904584327ff40810d675e51794aa442b16dbbe47ffb0a3fa84a4f3","mcr.azure.cn/aks/devinfra/echoserver@sha256:83d55af405bd1d74d9028ddc5eb3ac3414b30da8107669dc1937389858ca4ea2"]
+}

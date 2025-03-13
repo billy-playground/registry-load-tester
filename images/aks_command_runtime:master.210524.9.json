@@ -1,0 +1,5 @@
+{
+    "size": 30673099,
+    "manifest": "mcr.azure.cn/aks/command/runtime@sha256:1c49cb26c44ce9f846257ca1bae2d275862ebeb31d5529a62a6c4075665fd38f",
+    "blob": ["mcr.azure.cn/aks/command/runtime@sha256:167b6594ae673491602714faca4bb8fd552c5913001ff1f1ddb99b27422dc8e2","mcr.azure.cn/aks/command/runtime@sha256:540db60ca9383eac9e418f78490994d0af424aab7bf6d0e47ac8ed4e2e9bcbba","mcr.azure.cn/aks/command/runtime@sha256:0dc57c5c52e7676096c2fa3617f097041594b09a79c62e1c38a9fceafc07ba9a","mcr.azure.cn/aks/command/runtime@sha256:bee759e4ed47802c241f508403f5e1f8576c6b5e563e7d3b8585a05c8f5e14ee","mcr.azure.cn/aks/command/runtime@sha256:1650b678219e2d3b621476fe3ca3598a637e2255cea7663b46c69dc79a3d04b8","mcr.azure.cn/aks/command/runtime@sha256:fc82514a9eadefa0695f65b1c52e7c83e36a1e6f30e90dd6863a9cdfc45886f5","mcr.azure.cn/aks/command/runtime@sha256:e25d73a4b23f252f6006c9c56f3538f113e61fa748074a65e1ccc37e36bb29a6","mcr.azure.cn/aks/command/runtime@sha256:f61182372534f7dfc7d92609fabe4462b4be13151da7f088da708f217b018373"]
+}

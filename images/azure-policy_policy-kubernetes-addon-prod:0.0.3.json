@@ -1,0 +1,5 @@
+{
+    "size": 20884957,
+    "manifest": "mcr.azure.cn/azure-policy/policy-kubernetes-addon-prod@sha256:f8a33f836407d831ad2d3005180e38e10c7844c54c6bb94555f82444a8eff11d",
+    "blob": ["mcr.azure.cn/azure-policy/policy-kubernetes-addon-prod@sha256:e19586cbf13017988c15770dab577168c48ff3cdc31dde02bc3028ba1e411a67","mcr.azure.cn/azure-policy/policy-kubernetes-addon-prod@sha256:36698cfa5275e0bda70b0f864b7b174e0758ca122d8c6a54fb329d70082c73f8","mcr.azure.cn/azure-policy/policy-kubernetes-addon-prod@sha256:c5da8bc749fe2d885be78096717857499338484aca95d7eed37805f138f557a2"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 22467145,
+    "manifest": "mcr.azure.cn/aks/hcp/eventlogger@sha256:a6e9e8bf62a01d9937a90a6202f97c440c39f855ab55bdc4cb0fef6a21a4bf7e",
+    "blob": ["mcr.azure.cn/aks/hcp/eventlogger@sha256:7998a75319af688b5ed46f6d08e453ee312613b8c550210aa3f86492f9ce408d","mcr.azure.cn/aks/hcp/eventlogger@sha256:7d883a3eb1c556752c73dedf88da2c0d3943b9f5c3f763cdd7a813ca766f5486","mcr.azure.cn/aks/hcp/eventlogger@sha256:ea7a7ac05f0605ee2799c9e26056ee0f21b51246784dd8a261d9db3d53b6e4a4"]
+}

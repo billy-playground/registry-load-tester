@@ -1,0 +1,5 @@
+{
+    "size": 34949345,
+    "manifest": "mcr.azure.cn/aks/msi/addon-token-reconciler@sha256:8b5de59cd4d87e7fb5daeaf4b2a913b5669a947554cb3ad97ea408601e5f7a3e",
+    "blob": ["mcr.azure.cn/aks/msi/addon-token-reconciler@sha256:9cc5c8ea92c638a46b4f2f58a42032536775a08cbcf4d6ae82bdd72bfe88ef74","mcr.azure.cn/aks/msi/addon-token-reconciler@sha256:90b6222a61024d856941282245c3e009a2151951855826c8169ebafebdfef252","mcr.azure.cn/aks/msi/addon-token-reconciler@sha256:719877f6b8804e415096394e114c7096c69cd3af040bed806dcdde68b8cfb7e3"]
+}

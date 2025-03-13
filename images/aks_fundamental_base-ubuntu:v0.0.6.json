@@ -1,0 +1,5 @@
+{
+    "size": 92439977,
+    "manifest": "mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:f52ec4ffe51c75b40d93d5df577b5e6dbc090cafd9ca81b3339f6d42f59698f7",
+    "blob": ["mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:b25f2c92ca7d1b6e53d828d7bd7f4fa7abc848102a5b91beec71abaf4f4fe02d","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:5667fdb72017d1fb364744ca1abf7b6f3bbe9c98c3786f294a461c2866db69ab","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:d83811f270d56d34a208f721f3dbf1b9242d1900ad8981fc7071339681998a31","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:ee671aafb583e2321880e275c94d49a49185006730e871435cd851f42d2a775d","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:7fc152dfb3a6b5c9a436b49ff6cd72ed7eb5f1fd349128b50ee04c3c5c2355fb","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:bb062418830021b74fda910a8ed0d0f82446c964940c3e3daeddc97a63df545b","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:7a9ae27c3d4b87c20ba6ebb4da63b2a6d84867f8b3e0e4f7f5f7f160d9687c20","mcr.azure.cn/aks/fundamental/base-ubuntu@sha256:2d8049146887c97fc7c684f84b095501e75c8364da5aa3cb399757d3256fedaa"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 35430025,
+    "manifest": "mcr.azure.cn/aks/ccp/overlay-vpa-webhook-generation@sha256:829e66a40ec85fe76fa5e0682d1f9d1767dd84e26ca2705b3162d8771864a4e1",
+    "blob": ["mcr.azure.cn/aks/ccp/overlay-vpa-webhook-generation@sha256:ae3216bee96f8e1e8fecef49d7ec9d590ffd59a0cab430dffcff23fd204d27da","mcr.azure.cn/aks/ccp/overlay-vpa-webhook-generation@sha256:b9438f04afbdf7c4fbde8a9dbcd382f086b151cc0d11fb26842fbd918d6b2b4a","mcr.azure.cn/aks/ccp/overlay-vpa-webhook-generation@sha256:1b79325bbc1d63ead74f20b847034a694f8a3e1f95c02d62b160b7aedccfdcfc","mcr.azure.cn/aks/ccp/overlay-vpa-webhook-generation@sha256:0ccbbea6e7130b171a96283faf5f234dcb0fc0b3b9f7a138f74e0eb675c77ce4","mcr.azure.cn/aks/ccp/overlay-vpa-webhook-generation@sha256:5eafe4a115296dcd577f82bf835866f21ab9a32a0f38b904977d5c388d403ff9"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 21468644,
+    "manifest": "mcr.azure.cn/aks/fleet/hub-net-controller-manager@sha256:91e94368fda5d9aadea353c7df8a8d96b0849c9b6cb635776ae02d0875ff3b69",
+    "blob": ["mcr.azure.cn/aks/fleet/hub-net-controller-manager@sha256:ff9d8136f60dac04fd12682527526a33e2533f10bb011389ff829a7b98166ced","mcr.azure.cn/aks/fleet/hub-net-controller-manager@sha256:1cd0595314a53d179ddaf68761c9f40c4d9d1bcd3f692d1c005938dac2993db6","mcr.azure.cn/aks/fleet/hub-net-controller-manager@sha256:cbe3b2260a3cb6cdf64a69637db6f0ff6a02b686493cf0efb6d2f483547ee811"]
+}

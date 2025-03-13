@@ -1,0 +1,5 @@
+{
+    "size": 11801506,
+    "manifest": "mcr.azure.cn/aks/eno/eno-controller@sha256:abde415ec2751a5b48a1e412f4748484fc6be815825f449798a8f951ed11e28c",
+    "blob": ["mcr.azure.cn/aks/eno/eno-controller@sha256:ad4f4a1ebc6049f803dfdac1ea062f3d303bacaf2d27a820c9f847c0a4480e5e","mcr.azure.cn/aks/eno/eno-controller@sha256:b8225899e6a3c195dc9625beee289f53e78ab8be4dd6901f5283cf648bad2c0f"]
+}

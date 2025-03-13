@@ -1,0 +1,5 @@
+{
+    "size": 18934630,
+    "manifest": "mcr.azure.cn/aks/fleet/refresh-token@sha256:5668cbd9b206d169fa20abc3a9565f449a9c7295a0befd8fa0e3a3a54561e197",
+    "blob": ["mcr.azure.cn/aks/fleet/refresh-token@sha256:f014af3cbc3d72c7969fd7911bdd6960b175eb09bfc8d922f6a1149bfa6d8ac1","mcr.azure.cn/aks/fleet/refresh-token@sha256:b9f88661235d25835ef747dab426861d51c4e9923b92623d422d7ac58eb123e9","mcr.azure.cn/aks/fleet/refresh-token@sha256:0e368eba6eef78e1bee03ab40281f325d13c4be9318daf68aa7947c4dd9fa497"]
+}

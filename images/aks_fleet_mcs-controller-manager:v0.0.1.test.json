@@ -1,0 +1,5 @@
+{
+    "size": 21463117,
+    "manifest": "mcr.azure.cn/aks/fleet/mcs-controller-manager@sha256:5430ac57f4c17da327cc60868f6bdb2121386f7dcb4f0343b8ded2b6a476cc5c",
+    "blob": ["mcr.azure.cn/aks/fleet/mcs-controller-manager@sha256:3c38f3530909e7ce5f7193ed8d9b1b22046e570466979fb7b2a5f6a95ed95f02","mcr.azure.cn/aks/fleet/mcs-controller-manager@sha256:b9f88661235d25835ef747dab426861d51c4e9923b92623d422d7ac58eb123e9","mcr.azure.cn/aks/fleet/mcs-controller-manager@sha256:291619db2ad25fafc306d224f269b424bf0b0069d1525d63a78f1c89c056f2aa"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 39673065,
+    "manifest": "mcr.azure.cn/aks/ccp/private-connect-balancer@sha256:111d7341c717f55c616220a48659130f01b863777594ead5cebf79d65bf3b6b8",
+    "blob": ["mcr.azure.cn/aks/ccp/private-connect-balancer@sha256:d126b446323e4ab34c550772f8d00c1c68b17e0ffa07d644d4c9bdac5e10e0fa","mcr.azure.cn/aks/ccp/private-connect-balancer@sha256:90b6222a61024d856941282245c3e009a2151951855826c8169ebafebdfef252","mcr.azure.cn/aks/ccp/private-connect-balancer@sha256:635f2476a04bf47eb86df5fadcd27bc4ff4a713ed80f2ff622e510a86416dfd7"]
+}

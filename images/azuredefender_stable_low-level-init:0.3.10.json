@@ -1,0 +1,5 @@
+{
+    "size": 265733177,
+    "manifest": "mcr.azure.cn/azuredefender/stable/low-level-init@sha256:86724bec7b36e62085c55b023433dd441a4ed172b8d32593f4675a43997c93ca",
+    "blob": ["mcr.azure.cn/azuredefender/stable/low-level-init@sha256:cee6f0378c03a7f33bf767355f9c7e96d669eb9371683ee89604a4c12ea8d383","mcr.azure.cn/azuredefender/stable/low-level-init@sha256:feac5306138255e28a9862d3f3d29025d0a4d0648855afe1acd6131af07138ac","mcr.azure.cn/azuredefender/stable/low-level-init@sha256:251f1689c0184ed3509ec4f3eb1e4a7450610c2cabe49fb5644f9d42912ff20e","mcr.azure.cn/azuredefender/stable/low-level-init@sha256:698a2e9e12dbf1c90d9b6af0edb89509d4ede8884765a17b18111370303e84f1","mcr.azure.cn/azuredefender/stable/low-level-init@sha256:97b3855f35b9a1ab9fd58bb73f8e8da88e2bcb8452754aeeb2ef391b0880b109"]
+}

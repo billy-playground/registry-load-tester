@@ -1,0 +1,5 @@
+{
+    "size": 38067127,
+    "manifest": "mcr.azure.cn/azurearck8s/aks/stable/extensionoperator@sha256:e50281c80a7fcfe28bd16950d68d960e99185065507b0ba8af73df0605b8d7f5",
+    "blob": ["mcr.azure.cn/azurearck8s/aks/stable/extensionoperator@sha256:be3fc40d5479b40a024e8285ca96c621bc32d5df0c9c88a79b2983335f153ce7","mcr.azure.cn/azurearck8s/aks/stable/extensionoperator@sha256:71e685c69c513344b13e31fe025fa020954a035bd5a0b778432c107338769a98"]
+}

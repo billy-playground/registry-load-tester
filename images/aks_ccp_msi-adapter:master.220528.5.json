@@ -1,0 +1,5 @@
+{
+    "size": 18748128,
+    "manifest": "mcr.azure.cn/aks/ccp/msi-adapter@sha256:5214e6f03a640cc75910ca893d0df2e198b7d009f59f502aeabfba32ce48a1b0",
+    "blob": ["mcr.azure.cn/aks/ccp/msi-adapter@sha256:ebfe624d6b9e7dd1238e0288eceb276c7cb18b8e801ece7996e54dea9bec4f4a","mcr.azure.cn/aks/ccp/msi-adapter@sha256:8dd83346a82527bfdbd10d2658995297f272d92ad1639306d7f6bd3823ae747f","mcr.azure.cn/aks/ccp/msi-adapter@sha256:ac950f8db016d45c2bfdb2273e6a2898da45a42c6f391745b92ba660571021fe","mcr.azure.cn/aks/ccp/msi-adapter@sha256:759379c5fb434d28fe9e21232cbfeedb475ec578271e54c3717aa7c0a0445a3f","mcr.azure.cn/aks/ccp/msi-adapter@sha256:d75fa3a68f8785decb2c200c2466ae56803a9a13879899a436be6f5062e2acd5"]
+}

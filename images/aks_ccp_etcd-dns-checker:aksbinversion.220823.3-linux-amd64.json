@@ -1,0 +1,5 @@
+{
+    "size": 2721477,
+    "manifest": "mcr.azure.cn/aks/ccp/etcd-dns-checker@sha256:444345effff1a04a76107ab8a0fc07ca58a5e15ddb708a57a97eef813bea6611",
+    "blob": ["mcr.azure.cn/aks/ccp/etcd-dns-checker@sha256:f603325c1643de8b820b7c86553d3a2ebee095a773ef498f132ece6d8466fe53","mcr.azure.cn/aks/ccp/etcd-dns-checker@sha256:9cdf5e34b6231fa87dfbef049f576c0f90768d0c303963cbcf68f8460c743974","mcr.azure.cn/aks/ccp/etcd-dns-checker@sha256:01c440fb7c66584c2995ccb65b431fdffce411748bfd49f946a87bb979b4941a","mcr.azure.cn/aks/ccp/etcd-dns-checker@sha256:9039af2becec6fed4969debb8b9b06740368233045fe4bb2aedba2ed909d68ec"]
+}

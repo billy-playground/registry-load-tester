@@ -1,0 +1,5 @@
+{
+    "size": 18240701,
+    "manifest": "mcr.azure.cn/aks/hcp/cp-remediator@sha256:e8d6e92d492fc62f9e468528ae8457a0bd9fbafe294baa5a2cc35815bfdf7fe3",
+    "blob": ["mcr.azure.cn/aks/hcp/cp-remediator@sha256:cc761b566ffee304626e5410dbcf9c6e61abc47b8f1d48b3f2378f18be689044","mcr.azure.cn/aks/hcp/cp-remediator@sha256:9e4425256ce4503b2a009683be02372ee51d411e9cc3547919e064fee4970eab","mcr.azure.cn/aks/hcp/cp-remediator@sha256:c2a4053d10827c23e8b2001e582e93890e5fb80ee64cc61d75ccb21cb8e651b0"]
+}

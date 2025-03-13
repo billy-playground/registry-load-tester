@@ -1,0 +1,5 @@
+{
+    "size": 5907366,
+    "manifest": "mcr.azure.cn/aks/cost-analysis/cost-analysis-agent@sha256:ccf14f97a7f958a37a9728d5750e1f758ab32b781b79be483ca573e9e0634085",
+    "blob": ["mcr.azure.cn/aks/cost-analysis/cost-analysis-agent@sha256:14bea9d93d0a789960af0c4c6863748a3282a17e3f7bdaf0a5c4405129c7e805","mcr.azure.cn/aks/cost-analysis/cost-analysis-agent@sha256:686d76d68c2c447c27cef300f10b47bbe24f7942d966d24a9ca33ed0a62a262e","mcr.azure.cn/aks/cost-analysis/cost-analysis-agent@sha256:8066f0ec4f9f4b2ab549c1ca272c47e864534d522f13f2d1ac98ab3008bd7b93"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 22433226,
+    "manifest": "mcr.azure.cn/aks/acc/sgx-plugin@sha256:8979ddf8dd6f4b90d1f45f00813688566580d7441d5d6fde70751826cf5f1204",
+    "blob": ["mcr.azure.cn/aks/acc/sgx-plugin@sha256:d986ccf0000d144fb25e7f151669712d28aaee0dba4123892cba6dd155275794","mcr.azure.cn/aks/acc/sgx-plugin@sha256:cd382487769f68755f8ad1a2ab3545d8a0f992fa66f6dc3ac4302f92197e45bf","mcr.azure.cn/aks/acc/sgx-plugin@sha256:7a8340a3394534591b1ad960e0f0d5809a4a0e4e187798052d737378ae40f36a"]
+}

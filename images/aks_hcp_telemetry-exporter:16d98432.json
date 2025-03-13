@@ -1,0 +1,5 @@
+{
+    "size": 17159810,
+    "manifest": "mcr.azure.cn/aks/hcp/telemetry-exporter@sha256:ce897a0578bf1a6f93c5eca6a772191b192595ba00f8dc978412498530629e53",
+    "blob": ["mcr.azure.cn/aks/hcp/telemetry-exporter@sha256:6a61a4b697ee7bec09f71af170b53be4e109d04fe17d1be2dffa37e60b2fe299","mcr.azure.cn/aks/hcp/telemetry-exporter@sha256:7d883a3eb1c556752c73dedf88da2c0d3943b9f5c3f763cdd7a813ca766f5486","mcr.azure.cn/aks/hcp/telemetry-exporter@sha256:bb2d14fa667db2d22d4f04ea9f744e5931349faee10e96b36e7758654711190b"]
+}

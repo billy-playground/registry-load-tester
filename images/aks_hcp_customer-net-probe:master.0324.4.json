@@ -1,0 +1,5 @@
+{
+    "size": 26211472,
+    "manifest": "mcr.azure.cn/aks/hcp/customer-net-probe@sha256:27e7c7a3df8594b6d5e4e8fe8531ad650642db909048ae978ca5abbb32048fe2",
+    "blob": ["mcr.azure.cn/aks/hcp/customer-net-probe@sha256:0e896bf896b4dda0c0638b13e0ebd49afcb5b13dcdb71d31ff6d5aa93b275568","mcr.azure.cn/aks/hcp/customer-net-probe@sha256:fefd475334af8255ba693de12951b5176a2853c2f0d5d2b053e188a1f3b611d9","mcr.azure.cn/aks/hcp/customer-net-probe@sha256:c3c40d5e8c9670e6e0a022957f1673c575f66973991f1663db239941b4fc8a3b","mcr.azure.cn/aks/hcp/customer-net-probe@sha256:d23ed6822432d6c3eb6ce7bfa017b15343dba9a9fdbad0cbd6ba5e11f8c7bcd5"]
+}

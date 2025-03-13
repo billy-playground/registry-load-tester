@@ -1,0 +1,5 @@
+{
+    "size": 91735163,
+    "manifest": "mcr.azure.cn/azure-api-management/gateway@sha256:0db85bd394a6f6b8399e4e2a97d6a5a05e88df0506df3fb1563556d3cc39210e",
+    "blob": ["mcr.azure.cn/azure-api-management/gateway@sha256:cb11004854e86bad6a52c06489106484b34dd5a587ad3563e152f57078cf7306","mcr.azure.cn/azure-api-management/gateway@sha256:8e402f1a9c577ded051c1ef10e9fe4492890459522089959988a4852dee8ab2c","mcr.azure.cn/azure-api-management/gateway@sha256:3627c7390b0760005479e9ebb74504a7c7d1592566a619af1da5e3d7ee60a437","mcr.azure.cn/azure-api-management/gateway@sha256:f7ff2e960e19b34592239eb41d5884fc531f32ef5a3c9248f7537949926ef086","mcr.azure.cn/azure-api-management/gateway@sha256:d9e1c1e34db12c06d0cc712015d06b39508b5c8eb4f706a33f141614299a4654","mcr.azure.cn/azure-api-management/gateway@sha256:dbe4d225f4770d7725962fbdb07c43c97a04a3e3ee31a7279c291c686fffb681","mcr.azure.cn/azure-api-management/gateway@sha256:662d674fa27edc5854c9fe8cf1b5a1ecd61ae1c8ca85b11ab4a7555776d3b438"]
+}

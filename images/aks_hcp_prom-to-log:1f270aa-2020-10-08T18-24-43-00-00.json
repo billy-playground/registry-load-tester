@@ -1,0 +1,5 @@
+{
+    "size": 9619218,
+    "manifest": "mcr.azure.cn/aks/hcp/prom-to-log@sha256:53bb426ae1e10da231444caf4bdd6f9a77f81cd3115d836f2453bf8245a90c58",
+    "blob": ["mcr.azure.cn/aks/hcp/prom-to-log@sha256:5e994ac14282f434cf8a4c85fdf26cb929a09870874637d2f50b2a9a6e09b5ef","mcr.azure.cn/aks/hcp/prom-to-log@sha256:5c7fe08dec514a5105d43dfcae1a5a45be002bcd3251dd178ced702aecfb7531","mcr.azure.cn/aks/hcp/prom-to-log@sha256:bc2a028cdadaf4090d53967bbb3d14f938df5ec75f65c9b8adae6ac0ed18dbff"]
+}

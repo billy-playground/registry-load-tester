@@ -1,0 +1,5 @@
+{
+    "size": 21539285,
+    "manifest": "mcr.azure.cn/aks/fleet/member-net-controller-manager@sha256:57e5d65f6e10f8473ff7577cade09c408f4b6364f53752415cdcb3b9ac557947",
+    "blob": ["mcr.azure.cn/aks/fleet/member-net-controller-manager@sha256:6fefc71cf27a03a4a5ae501884b8a2b1bdf4f972998518a85c7640a69a0d025a","mcr.azure.cn/aks/fleet/member-net-controller-manager@sha256:b9f88661235d25835ef747dab426861d51c4e9923b92623d422d7ac58eb123e9","mcr.azure.cn/aks/fleet/member-net-controller-manager@sha256:51cd08f2e41afbc7cc305ed5f25c98a546c770d48593657cf6f28f0a6714834e"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 23101782,
+    "manifest": "mcr.azure.cn/aks/ccp/etcd-backup-fetcher@sha256:fe207aeb05045eaa83bbcb6326429b5521798ee88df274629568769a2dbc07f5",
+    "blob": ["mcr.azure.cn/aks/ccp/etcd-backup-fetcher@sha256:b9074e9eb84a8f59d84be3ec98372362907039d7ae23b5c1db2253042adaf4f5","mcr.azure.cn/aks/ccp/etcd-backup-fetcher@sha256:90b6222a61024d856941282245c3e009a2151951855826c8169ebafebdfef252","mcr.azure.cn/aks/ccp/etcd-backup-fetcher@sha256:91576a91bbefc6a0989952e98539bf359a2710877e2bc6aabd511dd6fe164786"]
+}

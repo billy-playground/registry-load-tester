@@ -1,0 +1,5 @@
+{
+    "size": 41558923,
+    "manifest": "mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:577309d3c35f7e32a2598d19b3fd2ac0527b55a0bea5a40f3319db27cf8158cb",
+    "blob": ["mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:5d39e96c0dbf639ae3473ca390bf8b2f766738931b60226e03e884906565f57c","mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:84e28782e9f49a8b9ec1cde9a6276ad7503f8067c9dfab0d04dedcd907d22808","mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:3577e36eb27d6b73db66cbd793c09fed43fb25764a9d170757377dd09681ecc7","mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:db3d7fa7bfb7815afa2ecfbfbd95b78bdbb9c363ef072b1a5245661be4bb4f9a","mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:fa99ae631110bae7f7e8a6e401d73978ab7ec9dbbaaec6aff2986b42754d2780","mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:e13551233d25f117f7542fe9988a4c45d89816bcc9b0a855c2a846f638c5bd02","mcr.azure.cn/aks/devinfra/base-os-runtime-csi-e2e@sha256:3c2cba919283a210665e480bcbf943eaaf4ed87a83f02e81bb286b8bdead0e75"]
+}

@@ -1,0 +1,5 @@
+{
+    "size": 68668012,
+    "manifest": "mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:58930cca3f4883725ffedffe43f47ca97efe4cf832ccb81a4da65597239118bf",
+    "blob": ["mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:d90ba4cef69fa80920cf27bdb8015deb2b52cdda5f7365754ce8ff181f523a79","mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:6c00346bc64826643241ff41090b28f58463a130d318187f360496bd140d6c96","mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:e1ceb52f9e5c30da8dc3527b2d2bf0494ef2581a22f2df5519c1f96513f710b5","mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:92be82d8ddbb417dbb8c36749e1466629fd01a4dbb444b41dca29e7944baaa5d","mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:44565244680996c444c6bd460c0930cc026d4c6f22bf9aea4030de459fa9dd5c","mcr.azure.cn/aks/hcp/addon-token-adapter@sha256:4f0527fdf49997c1fc172d5f53363b1acab861611eb6f7e848ad22159217a8ad"]
+}

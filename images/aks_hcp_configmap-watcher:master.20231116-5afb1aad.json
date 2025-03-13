@@ -1,0 +1,5 @@
+{
+    "size": 23125029,
+    "manifest": "mcr.azure.cn/aks/hcp/configmap-watcher@sha256:51b5a8d4296afaf037c532ed52d17df37ebd154e02af547beb3eb74ecc9a2d3a",
+    "blob": ["mcr.azure.cn/aks/hcp/configmap-watcher@sha256:230caa256d6f7f7ccdfd0faa5d5dea96484e0f4994990147884363e91e0c8189","mcr.azure.cn/aks/hcp/configmap-watcher@sha256:7d883a3eb1c556752c73dedf88da2c0d3943b9f5c3f763cdd7a813ca766f5486","mcr.azure.cn/aks/hcp/configmap-watcher@sha256:4a81b08c284388b5af380be869d5da91e5e058253e0aef8ebd6d9dd7d6e9d4d1"]
+}

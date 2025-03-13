@@ -1,0 +1,5 @@
+{
+    "size": 25530977,
+    "manifest": "mcr.azure.cn/aks/acc/sgx-webhook@sha256:440414a255d5e94588bca553c1b56689f567ee2b3b708e4cfd16ef7c26f77b04",
+    "blob": ["mcr.azure.cn/aks/acc/sgx-webhook@sha256:1561d12934db5e87a4792a5d1c50913740c576e8d076c9d2b14a059902e7c7d0","mcr.azure.cn/aks/acc/sgx-webhook@sha256:dc006486cbd4cc273d9cbb59aa803635c971553010bd3c8a549c8b9859fb9ef6","mcr.azure.cn/aks/acc/sgx-webhook@sha256:77f1cbb4c71c89cc3c07d6dbfb5da78401e2195be0cb066af6d2ca144f29cb3f"]
+}

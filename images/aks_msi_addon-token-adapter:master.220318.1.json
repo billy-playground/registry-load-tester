@@ -1,0 +1,5 @@
+{
+    "size": 34675618,
+    "manifest": "mcr.azure.cn/aks/msi/addon-token-adapter@sha256:e16a7de083dde467f111a5a2b083557a748cdd4a0dda34f40c9074b966342750",
+    "blob": ["mcr.azure.cn/aks/msi/addon-token-adapter@sha256:3f027be203ac54b3e7b944899a902558263e5e86b66e4e4de40a1b25021a8fab","mcr.azure.cn/aks/msi/addon-token-adapter@sha256:6c00346bc64826643241ff41090b28f58463a130d318187f360496bd140d6c96","mcr.azure.cn/aks/msi/addon-token-adapter@sha256:77ebd36f00feaaebaccb145a44ac3dcc33c6009c8ef6058e88406d9adb71f047"]
+}

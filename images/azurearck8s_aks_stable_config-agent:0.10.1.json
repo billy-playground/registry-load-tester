@@ -1,0 +1,5 @@
+{
+    "size": 37503817,
+    "manifest": "mcr.azure.cn/azurearck8s/aks/stable/config-agent@sha256:5f3ca9233e9d94a941750407f0a5064ddfab8e04fd07421a9fa9c0cd3210ee20",
+    "blob": ["mcr.azure.cn/azurearck8s/aks/stable/config-agent@sha256:3ef4c5ad6bccab1a05348a196889d92851148de6872d54b39fa4358a7ba35f67","mcr.azure.cn/azurearck8s/aks/stable/config-agent@sha256:b745f675bde7f30a579cce264cb96c3f70e40855e470603f8cc5672f9bc28290"]
+}

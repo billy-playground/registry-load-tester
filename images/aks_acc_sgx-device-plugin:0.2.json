@@ -1,0 +1,5 @@
+{
+    "size": 34379309,
+    "manifest": "mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:bcae92e17695710e38aa176e9e03193ba2b9bbbdf1a4a23820077693ae6a9c47",
+    "blob": ["mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:8c8c26726eef89850ab8f7c9c1fc8e4afe82093e8fb7d15599ce5c2d2b64415e","mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:23884877105a7ff84a910895cd044061a4561385ff6c36480ee080b76ec0e771","mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:bc38caa0f5b94141276220daaf428892096e4afd24b05668cd188311e00a635f","mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:2910811b6c4227c2f42aaea9a3dd5f53b1d469f67e2cf7e601f631b119b61ff7","mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:36505266dcc64eeb1010bd2112e6f73981e1a8246e4f6d4e287763b57f101b0b","mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:5ca242194c22366189bb932827691f8405cfc4b23101a5031f001f7ee3fb92bf","mcr.azure.cn/aks/acc/sgx-device-plugin@sha256:a827044718e07e21435dd4924167372c284f93e42e0853989a3820f8d8c1f5e7"]
+}

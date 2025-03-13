@@ -1,0 +1,5 @@
+{
+    "size": 13060282,
+    "manifest": "mcr.azure.cn/aks/hcp/ccp-auto-thrust@sha256:84aacc84c8f5dc4703f38c5c15250241e2242ded4f50b3d401fa41684e208c24",
+    "blob": ["mcr.azure.cn/aks/hcp/ccp-auto-thrust@sha256:39e145461c0afae360fe0e0f88a76949e633d50cdd108d0488b2025f88ad0488","mcr.azure.cn/aks/hcp/ccp-auto-thrust@sha256:fefd475334af8255ba693de12951b5176a2853c2f0d5d2b053e188a1f3b611d9","mcr.azure.cn/aks/hcp/ccp-auto-thrust@sha256:c3c40d5e8c9670e6e0a022957f1673c575f66973991f1663db239941b4fc8a3b","mcr.azure.cn/aks/hcp/ccp-auto-thrust@sha256:2b452effb668c626c3e426158c0277cb71d4a3a7a8d29bdb1bfe21f4c5438b56"]
+}

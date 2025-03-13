@@ -1,0 +1,5 @@
+{
+    "size": 17933649,
+    "manifest": "mcr.azure.cn/aks/msi-acrpull@sha256:f86ea89dd994fc73cb725984a641cd99bf22b32a06f128566e5990fb68f4048a",
+    "blob": ["mcr.azure.cn/aks/msi-acrpull@sha256:381b61be8faf064da2bc2bcb99e30f4e01a96ae833925f114f1e2d40631f1fea","mcr.azure.cn/aks/msi-acrpull@sha256:4000adbbc3eb1099e3a263c418f7c1d7def1fa2de0ae00ba48245cda9389c823","mcr.azure.cn/aks/msi-acrpull@sha256:3c2cba919283a210665e480bcbf943eaaf4ed87a83f02e81bb286b8bdead0e75","mcr.azure.cn/aks/msi-acrpull@sha256:368ad37e32d7dd9a31c80a3abeef9527120357eb6f63cceecdf507a0762ee3a1"]
+}
