@@ -1,0 +1,2 @@
+# Ignore files in prepare/json_files
+prepare/json_files/*
