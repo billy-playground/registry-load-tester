@@ -21,7 +21,7 @@ wait_for_all() {
 
 
 # cleanup csv with header
-echo "json_file,total_size,download_seconds" > results.csv
+echo "json_file,total_size,download_milliseconds" > results.csv
 
 # Run instances in parallel
 echo "Starting $NUM_INSTANCES test instances..."
