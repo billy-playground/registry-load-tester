@@ -1,2 +1,3 @@
 # Ignore files in prepare/json_files
+results.csv
 prepare/json_files/*
