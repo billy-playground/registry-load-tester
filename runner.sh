@@ -25,7 +25,7 @@ blob_refs=($(jq -r '.blob[]' "$json_file"))
 # Array to store PIDs of background jobs
 pids=()
 # Variable to track overall success
-all_success=0
+all_success=1
 
 # Record start time in seconds since epoch
 start_time=$(date +%s)
@@ -48,7 +48,7 @@ done
 for pid in "${pids[@]}"; do
     wait "$pid"
     if [ $? -ne 0 ]; then
-        all_success=1  # Set to 1 if any download fails
+        all_success=0  # Set to 0 if any download fails
     fi
 done       
 
@@ -56,7 +56,7 @@ done
 end_time=$(date +%s)
 download_time=$((end_time - start_time))
 
-if [ $all_success -eq 0 ]; then
+if [ $all_success -eq 1 ]; then
     # output to csv line, tee to stdout
     echo "$json_file,$total_size,$download_time" | tee -a results.csv
     echo "Test completed successfully for $json_file with total layer size: $total_size bytes in $download_time seconds" >&2
