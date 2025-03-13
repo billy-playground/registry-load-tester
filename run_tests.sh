@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of instances to run
-NUM_INSTANCES=30
+NUM_INSTANCES=50
 
 # Array to store PIDs
 pids=()
