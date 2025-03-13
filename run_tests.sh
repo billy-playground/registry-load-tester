@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of instances to run
-NUM_INSTANCES=100
+NUM_INSTANCES=30
 
 # Array to store PIDs
 pids=()
@@ -19,6 +19,10 @@ wait_for_all() {
     return $all_success
 }
 
+
+# cleanup csv with header
+echo "json_file,total_size,download_seconds" > results.csv
+
 # Run instances in parallel
 echo "Starting $NUM_INSTANCES test instances..."
 for ((i=1; i<=NUM_INSTANCES; i++)); do
@@ -35,5 +39,7 @@ if [ $EXIT_CODE -eq 0 ]; then
 else
     echo "One or more instances failed"
 fi
+
+cat results.csv
 
 exit $EXIT_CODE

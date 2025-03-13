@@ -32,12 +32,14 @@ start_time=$(date +%s)
 
 # Download manifest in background if present
 if [ -n "$manifest_ref" ] && [ "$manifest_ref" != "null" ]; then
+    echo "Downloading manifest from $manifest_ref" >&2
     oras manifest fetch --output /dev/null "$manifest_ref"  --no-tty & # 2>/dev/null
     pids+=($!)
 fi
 
 # Download blobs in background
 for blob_url in "${blob_refs[@]}"; do
+    echo "Downloading blob from $blob_url" >&2
     oras blob fetch --output /dev/null "$blob_url"  --no-tty & # 2>/dev/null
     pids+=($!)
 done
@@ -55,6 +57,8 @@ end_time=$(date +%s)
 download_time=$((end_time - start_time))
 
 if [ $all_success -eq 0 ]; then
+    # output to csv line, tee to stdout
+    echo "$json_file,$total_size,$download_time" | tee -a results.csv
     echo "Test completed successfully for $json_file with total layer size: $total_size bytes in $download_time seconds" >&2
     exit 0
 else
