@@ -20,7 +20,7 @@ echo "Processing $json_file" >&2
 # Parse JSON using jq
 total_size=$(jq -r '.size' "$json_file")
 manifest_ref=$(jq -r '.manifest' "$json_file")
-blob_refs=($(jq -r '.blobs[]' "$json_file"))
+blob_refs=($(jq -r '.blob[]' "$json_file"))
 
 # Array to store PIDs of background jobs
 pids=()
@@ -48,9 +48,9 @@ done
 for pid in "${pids[@]}"; do
     wait "$pid"
     if [ $? -ne 0 ]; then
-        all_success=0  # Set to 0 if any download fails
+        all_success=0 # Set to 0 if any download fails
     fi
-done       
+done
 
 # Record end time and calculate elapsed time in milliseconds
 end_time=$(date +%s%3N)
