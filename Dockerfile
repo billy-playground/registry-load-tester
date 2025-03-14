@@ -1,8 +1,11 @@
 # Use the ORAS image as a parent image
 FROM ghcr.io/oras-project/oras:v1.2.0
 
-# Install bash
-RUN apk add --no-cache bash jq
+# Install dependencies
+RUN apk add --no-cache bash jq 
+
+# Install for date usage
+RUN apk add --no-cache coreutils
 
 # Set the working directory
 WORKDIR /app
