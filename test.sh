@@ -19,12 +19,10 @@ wait_for_all() {
     return $all_success
 }
 
-
-# cleanup csv with header
-echo "json_file,total_size,download_milliseconds" > results.csv
-
-# Run instances in parallel
 echo "Starting $NUM_INSTANCES test instances..."
+
+echo "json_file,total_size,download_milliseconds"
+# Run instances in parallel
 for ((i=1; i<=NUM_INSTANCES; i++)); do
     ./runner.sh &
     pids+=($!)
@@ -34,12 +32,10 @@ done
 wait_for_all
 EXIT_CODE=$?
 
-if [ $EXIT_CODE -eq 0 ]; then
-    echo "All $NUM_INSTANCES instances completed successfully"
-else
-    echo "One or more instances failed"
-fi
-
-cat results.csv
+# if [ $EXIT_CODE -eq 0 ]; then
+#     echo "All $NUM_INSTANCES instances completed successfully"
+# else
+#     echo "One or more instances failed"
+# fi
 
 exit $EXIT_CODE
