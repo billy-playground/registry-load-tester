@@ -31,12 +31,12 @@ wait_for_all() {
 auth=$(curl -LIs "https://$registry/v2/" | grep -i "Www-Authenticate:")
 realm=$(parse_challenge "$auth" realm)
 service=$(parse_challenge "$auth" service)
-curl -s -X GET "$realm?service=$service&scope=repository:*:pull" | jq -r '.access_token' | oras login $registry --identity-token-stdin > /dev/null
+token=$(curl -s -X GET "$realm?service=$service&scope=repository:*:pull" | jq -r '.access_token')
 
 echo "json_file,total_size,download_milliseconds"
 # Run instances in parallel
 for ((i=1; i<=NUM_INSTANCES; i++)); do
-    ./runner.sh &
+    ./runner.sh $token &
     pids+=($!)
 done
 

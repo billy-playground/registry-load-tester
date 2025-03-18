@@ -1,5 +1,13 @@
 #!/bin/bash
 
+ACCESS_TOKEN=$1
+
+# Check if the access token is provided
+if [ -z "$ACCESS_TOKEN" ]; then
+    echo "Usage: $0 <access_token>"
+    exit 1
+fi
+
 # Directory containing JSON files
 JSON_DIR="images"
 
@@ -33,14 +41,14 @@ start_time=$(date +%s%3N)
 # Download manifest in background if present
 if [ -n "$manifest_ref" ] && [ "$manifest_ref" != "null" ]; then
     # echo "Downloading manifest from $manifest_ref" >&2
-    oras manifest fetch --output /dev/null "$manifest_ref" --no-tty & # 2>/dev/null
+    oras manifest fetch --output /dev/null "$manifest_ref" --no-tty -H"Authorization: Bearer $ACCESS_TOKEN" & # 2>/dev/null
     pids+=($!)
 fi
 
 # Download blobs in background
 for blob_url in "${blob_refs[@]}"; do
     # echo "Downloading blob from $blob_url" >&2
-    oras blob fetch --output /dev/null "$blob_url" --no-tty & # 2>/dev/null
+    oras blob fetch --output /dev/null "$blob_url" --no-tty  -H"Authorization: Bearer $ACCESS_TOKEN" & # 2>/dev/null
     pids+=($!)
 done
 
