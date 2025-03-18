@@ -2,7 +2,7 @@
 FROM ghcr.io/oras-project/oras:v1.2.0
 
 # Install dependencies
-RUN apk add --no-cache bash jq 
+RUN apk add --no-cache bash jq curl grep
 
 # Install for date usage
 RUN apk add --no-cache coreutils

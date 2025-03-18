@@ -3,8 +3,16 @@
 # Number of instances to run, default is 50
 NUM_INSTANCES=${1:-50}
 
+# Registry
+registry="mcr.azure.cn"
+
 # Array to store PIDs
 pids=()
+
+# Parses the challenge from the authentication header
+function parse_challenge() {
+    sed -n "s/.*$2=\"\([^\"]*\).*/\1/p" <<< $1
+}
 
 # Function to wait for all processes and check their exit status
 wait_for_all() {
@@ -19,7 +27,11 @@ wait_for_all() {
     return $all_success
 }
 
-echo "Starting $NUM_INSTANCES test instances..."
+# Get anonymous token and login
+auth=$(curl -LIs "https://$registry/v2/" | grep -i "Www-Authenticate:")
+realm=$(parse_challenge "$auth" realm)
+service=$(parse_challenge "$auth" service)
+curl -s -X GET "$realm?service=$service&scope=repository:*:pull" | jq -r '.access_token' | oras login $registry --identity-token-stdin > /dev/null
 
 echo "json_file,total_size,download_milliseconds"
 # Run instances in parallel
