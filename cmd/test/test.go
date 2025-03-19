@@ -41,12 +41,12 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error reading image JSON files: %v\n", err)
 		os.Exit(1)
 	}
-	if len(files) == 0 {
+	if len(allFiles) == 0 {
 		fmt.Fprintf(os.Stderr, "No JSON files found in assets/images\n")
 		os.Exit(1)
 	}
 	for i := range numInstances {
-		files[i] = allFiles[rand.Intn(len(files))]
+		files[i] = allFiles[rand.Intn(len(allFiles))]
 	}
 	// Run instances in parallel
 	var wg sync.WaitGroup

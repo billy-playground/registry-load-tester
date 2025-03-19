@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"net/http"
 	"os"
 	"sync"
 	"time"
@@ -47,11 +48,10 @@ func (r *Runner) StartNew(fileName string) error {
 	if err != nil {
 		return fmt.Errorf("failed to create repository: %w", err)
 	}
+
 	repo.Client = &auth.Client{
-		Credential: func(_ context.Context, _ string) (auth.Credential, error) {
-			return auth.Credential{
-				AccessToken: r.accessToken,
-			}, nil
+		Header: http.Header{
+			"Authorization": []string{fmt.Sprintf("Bearer %s", r.accessToken)},
 		},
 	}
 
