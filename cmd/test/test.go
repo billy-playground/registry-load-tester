@@ -36,13 +36,18 @@ func main() {
 
 	// Generate a random array of picked JSON files with length numInstances
 	files := make([]string, numInstances)
+
+	allFiles, err := filepath.Glob(filepath.Join("assets/images", "*.json"))
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error reading image JSON files: %v\n", err)
+		os.Exit(1)
+	}
+	if len(files) == 0 {
+		fmt.Fprintf(os.Stderr, "No JSON files found in assets/images\n")
+		os.Exit(1)
+	}
 	for i := range numInstances {
-		jsonFile, err := pickRandomJSON("assets/images")
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error picking random JSON file: %v\n", err)
-			os.Exit(1)
-		}
-		files[i] = jsonFile
+		files[i] = allFiles[rand.Intn(len(files))]
 	}
 	// Run instances in parallel
 	var wg sync.WaitGroup
