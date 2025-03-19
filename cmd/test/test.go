@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"math/rand"
 	"net/http"
@@ -147,15 +146,4 @@ func parseChallenge(header, key string) string {
 		return ""
 	}
 	return header[start : start+end]
-}
-
-func pickRandomJSON(dir string) (string, error) {
-	files, err := filepath.Glob(filepath.Join(dir, "*.json"))
-	if err != nil {
-		return "", err
-	}
-	if len(files) == 0 {
-		return "", errors.New("no JSON files found in " + dir)
-	}
-	return files[rand.Intn(len(files))], nil
 }

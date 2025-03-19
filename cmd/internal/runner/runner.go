@@ -68,6 +68,7 @@ func (r *Runner) StartNew(fileName string) error {
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error downloading manifest: %v\n", err)
 				allSuccess = false
+				return
 			}
 			defer rc.Close()
 			if _, err := io.Copy(io.Discard, rc); err != nil {
@@ -86,6 +87,7 @@ func (r *Runner) StartNew(fileName string) error {
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error downloading blob: %v\n", err)
 				allSuccess = false
+				return
 			}
 			defer rc.Close()
 			if _, err := io.Copy(io.Discard, rc); err != nil {
