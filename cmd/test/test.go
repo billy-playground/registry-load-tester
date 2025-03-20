@@ -2,9 +2,11 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"math/rand"
+	"net"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -15,14 +17,39 @@ import (
 )
 
 func main() {
-	// Default number of instances is 50
-	numInstances := 50
+	// Input arguments:
+	// 0. Input check and help
+	if len(os.Args) < 2 {
+		fmt.Println("Usage: go run main.go <num_instances> <registry_domain> [<registry_endpoint>]")
+		fmt.Println("num_instances: Number of instances to run")
+		fmt.Println("registry_domain: Domain of the registry")
+		fmt.Println("registry_endpoint: Endpoint of the registry (default: registry)")
+		os.Exit(1)
+	}
+	// 1. Number of instances to run
+	var numInstances int
 	if len(os.Args) > 1 {
 		fmt.Sscanf(os.Args[1], "%d", &numInstances)
 	}
-
-	// Registry
-	registry := "mcr.azure.cn"
+	// 2. Registry domain
+	var registry string
+	if len(os.Args) > 2 {
+		registry = os.Args[2]
+	}
+	// 3. Registry endpoint (default to registry)
+	endpoint := registry
+	if len(os.Args) > 3 {
+		endpoint = os.Args[3]
+		// Resolve registry to endpoint
+		http.DefaultClient.Transport = &http.Transport{
+			DialContext: func(ctx context.Context, network, addr string) (net.Conn, error) {
+				if after, found := strings.CutPrefix(addr, registry); found {
+					return net.Dial(network, endpoint+after)
+				}
+				return net.Dial(network, addr)
+			},
+		}
+	}
 
 	// Get anonymous token
 	token, err := getAuthToken(registry)
@@ -66,7 +93,7 @@ func main() {
 
 func getAuthToken(registry string) (string, error) {
 	// Get the authentication header
-	client := &http.Client{}
+	client := http.DefaultClient
 	req, err := http.NewRequest("HEAD", fmt.Sprintf("https://%s/v2/", registry), nil)
 	if err != nil {
 		return "", fmt.Errorf("failed to create request: %v", err)
