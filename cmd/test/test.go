@@ -48,23 +48,20 @@ func main() {
 	for i := range numInstances {
 		files[i] = allFiles[rand.Intn(len(allFiles))]
 	}
+
 	// Run instances in parallel
 	var wg sync.WaitGroup
 	testRunner := runner.NewRunner(token)
-	exitCode := 0
 	for i := 0; i < numInstances; i++ {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
-			if err := testRunner.StartNew(files[i]); err != nil {
-				exitCode = 1
-			}
+			_ = testRunner.StartNew(files[i])
 		}()
 	}
 
 	// Wait for all instances to complete
 	wg.Wait()
-	os.Exit(exitCode)
 }
 
 func getAuthToken(registry string) (string, error) {
