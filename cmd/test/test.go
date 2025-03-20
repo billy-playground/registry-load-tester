@@ -58,8 +58,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("json_file,total_size,download_milliseconds")
-
+	fmt.Println("json_file,total_size,download_milliseconds,total_count,success_count")
 	// Generate a random array of picked JSON files with length numInstances
 	files := make([]string, numInstances)
 
