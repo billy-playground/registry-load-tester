@@ -1,6 +1,7 @@
 FROM docker.io/library/golang:1.23.4-alpine AS builder
 RUN apk add make
 ADD . /src
+RUN rm -rf /src/bin
 WORKDIR /src
 RUN make build  # Static build for amd64
 RUN mv /src/bin/test /go/bin/test
