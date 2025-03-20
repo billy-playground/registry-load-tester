@@ -23,23 +23,21 @@ func main() {
 		fmt.Println("Usage: go run main.go <num_instances> <registry_domain> [<registry_endpoint>]")
 		fmt.Println("num_instances: Number of instances to run")
 		fmt.Println("registry_domain: Domain of the registry")
+		fmt.Println("anonymous_token_required: Whether an anonymous token is required (true/false)")
 		fmt.Println("registry_endpoint: Endpoint of the registry (default: registry)")
 		os.Exit(1)
 	}
 	// 1. Number of instances to run
 	var numInstances int
-	if len(os.Args) > 1 {
-		fmt.Sscanf(os.Args[1], "%d", &numInstances)
-	}
+	fmt.Sscanf(os.Args[1], "%d", &numInstances)
 	// 2. Registry domain
-	var registry string
-	if len(os.Args) > 2 {
-		registry = os.Args[2]
-	}
-	// 3. Registry endpoint (default to registry)
+	var registry = os.Args[2]
+	// 3. Anonymous token required
+	var anonymousTokenRequired = (os.Args[3] == "true")
+	// 4. Registry endpoint (default to registry)
 	endpoint := registry
-	if len(os.Args) > 3 {
-		endpoint = os.Args[3]
+	if len(os.Args) > 4 {
+		endpoint = os.Args[4]
 		// Resolve registry to endpoint
 		http.DefaultClient.Transport = &http.Transport{
 			DialContext: func(ctx context.Context, network, addr string) (net.Conn, error) {
@@ -52,10 +50,13 @@ func main() {
 	}
 
 	// Get anonymous token
-	token, err := getAuthToken(registry)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error getting auth token: %v\n", err)
-		os.Exit(1)
+	var token string
+	if anonymousTokenRequired {
+		var err error
+		if token, err = getAuthToken(registry); err != nil {
+			fmt.Fprintf(os.Stderr, "Error getting auth token: %v\n", err)
+			os.Exit(1)
+		}
 	}
 
 	fmt.Println("json_file,total_size,download_milliseconds,total_count,success_count")

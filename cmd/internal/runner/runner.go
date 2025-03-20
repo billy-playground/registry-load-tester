@@ -48,10 +48,12 @@ func (r *Runner) StartNew(fileName string) error {
 	if err != nil {
 		return fmt.Errorf("failed to create repository: %w", err)
 	}
-	repo.Client = &auth.Client{
-		Header: http.Header{
-			"Authorization": []string{fmt.Sprintf("Bearer %s", r.accessToken)},
-		},
+	if r.accessToken != "" {
+		repo.Client = &auth.Client{
+			Header: http.Header{
+				"Authorization": []string{fmt.Sprintf("Bearer %s", r.accessToken)},
+			},
+		}
 	}
 
 	// Download manifest and blobs concurrently
