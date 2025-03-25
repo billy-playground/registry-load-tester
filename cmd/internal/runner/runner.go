@@ -12,6 +12,7 @@ import (
 
 	"context"
 
+	"oras.land/oras-go/v2/registry"
 	"oras.land/oras-go/v2/registry/remote"
 	"oras.land/oras-go/v2/registry/remote/auth"
 
@@ -64,13 +65,14 @@ func (r *Runner) StartNew(fileName string) error {
 	var totalCount = 1 + len(data.Blobs)
 	var successCount atomic.Int32
 	var downloadedSize atomic.Int64
+	var ref = repo.Reference
 
 	if data.Manifest != "" {
 		wg.Add(1)
-		go func(manifest string) {
+		go func(store registry.ManifestStore, manifest string) {
 			defer wg.Done()
 			// Fetch the manifest
-			_, rc, err := repo.Manifests().FetchReference(ctx, manifest)
+			_, rc, err := store.FetchReference(ctx, manifest)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error downloading manifest: %v\n", err)
 				return
@@ -83,15 +85,19 @@ func (r *Runner) StartNew(fileName string) error {
 			}
 			downloadedSize.Add(size)
 			successCount.Add(1)
-		}(data.Manifest)
+		}(repo.Manifests(), ref.Reference)
 	}
 
 	for _, blob := range data.Blobs {
 		wg.Add(1)
-		go func(blob string) {
+		go func(store registry.BlobStore, blob string) {
+			ref, err := registry.ParseReference(blob)
+			if err != nil {
+				return
+			}
 			defer wg.Done()
 			// Fetch the blob
-			_, rc, err := repo.Blobs().FetchReference(ctx, blob)
+			_, rc, err := store.FetchReference(ctx, ref.Reference)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error downloading blob: %v\n", err)
 				return
@@ -104,7 +110,7 @@ func (r *Runner) StartNew(fileName string) error {
 			}
 			downloadedSize.Add(size)
 			successCount.Add(1)
-		}(blob)
+		}(repo.Blobs(), blob)
 	}
 
 	wg.Wait()
