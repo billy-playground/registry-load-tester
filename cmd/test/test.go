@@ -12,6 +12,7 @@ import (
 	"path/filepath"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/billy-playground/registry-load-tester/cmd/internal/runner"
 )
@@ -76,6 +77,8 @@ func main() {
 		files[i] = allFiles[rand.Intn(len(allFiles))]
 	}
 
+	start := time.Now()
+
 	// Run instances in parallel
 	var wg sync.WaitGroup
 	testRunner := runner.NewRunner(token)
@@ -86,9 +89,9 @@ func main() {
 			_ = testRunner.StartNew(files[i])
 		}()
 	}
-
-	// Wait for all instances to complete
 	wg.Wait()
+
+	fmt.Printf("Total time taken: %.2f seconds\n", time.Since(start).Seconds())
 }
 
 func getAuthToken(registry string) (string, error) {
