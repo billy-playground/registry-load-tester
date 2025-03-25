@@ -60,6 +60,7 @@ func (r *Runner) StartNew(fileName string) error {
 	var wg sync.WaitGroup
 	var totalCount = 1 + len(data.Blobs)
 	var successCount atomic.Int32
+	var downloadedSize atomic.Int64
 
 	if data.Manifest != "" {
 		wg.Add(1)
@@ -72,9 +73,12 @@ func (r *Runner) StartNew(fileName string) error {
 				return
 			}
 			defer rc.Close()
-			if _, err := io.Copy(io.Discard, rc); err != nil {
+			size, err := io.Copy(io.Discard, rc)
+			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error reading manifest response: %v\n", err)
+				return
 			}
+			downloadedSize.Add(size)
 			successCount.Add(1)
 		}(data.Manifest)
 	}
@@ -90,9 +94,12 @@ func (r *Runner) StartNew(fileName string) error {
 				return
 			}
 			defer rc.Close()
-			if _, err := io.Copy(io.Discard, rc); err != nil {
+			size, err := io.Copy(io.Discard, rc)
+			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error reading blob response: %v\n", err)
+				return
 			}
+			downloadedSize.Add(size)
 			successCount.Add(1)
 		}(blob)
 	}
@@ -104,7 +111,7 @@ func (r *Runner) StartNew(fileName string) error {
 	downloadMilliseconds := endTime.Sub(startTime).Milliseconds()
 
 	// Output results
-	fmt.Printf("%s,%d,%d,%d,%d\n", fileName, data.Size, downloadMilliseconds, totalCount, successCount.Load())
+	fmt.Printf("%s,%d,%d,%d,%d\n", fileName, downloadedSize.Load(), downloadMilliseconds, totalCount, successCount.Load())
 	return nil
 }
 
