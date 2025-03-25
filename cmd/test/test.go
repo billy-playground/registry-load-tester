@@ -19,8 +19,8 @@ import (
 func main() {
 	// Input arguments:
 	// 0. Input check and help
-	if len(os.Args) < 2 {
-		fmt.Println("Usage: go run main.go <num_instances> <registry_domain> [<registry_endpoint>]")
+	if len(os.Args) < 3 {
+		fmt.Println("Usage: go run main.go <num_instances> <registry_domain> <anonymous_token_required(true/false)> [<registry_endpoint>]")
 		fmt.Println("num_instances: Number of instances to run")
 		fmt.Println("registry_domain: Domain of the registry")
 		fmt.Println("anonymous_token_required: Whether an anonymous token is required (true/false)")
