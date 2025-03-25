@@ -81,7 +81,7 @@ func main() {
 
 	// Run instances in parallel
 	var wg sync.WaitGroup
-	testRunner := runner.NewRunner(token)
+	testRunner := runner.NewRunner(token, registry)
 	for i := 0; i < numInstances; i++ {
 		wg.Add(1)
 		go func() {

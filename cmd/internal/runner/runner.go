@@ -21,12 +21,14 @@ import (
 // Runner can be used to start a new test instance to download blobs and manifests.
 type Runner struct {
 	accessToken string
+	registry    string
 }
 
 // It takes a JSON file as input and downloads the blobs and manifests specified in the file.
-func NewRunner(accessToken string) *Runner {
+func NewRunner(accessToken string, registry string) *Runner {
 	return &Runner{
 		accessToken: accessToken,
+		registry:    registry,
 	}
 }
 
@@ -45,6 +47,7 @@ func (r *Runner) StartNew(fileName string) error {
 	// Set up repository client
 	ctx := context.Background()
 	repo, err := remote.NewRepository(data.Manifest)
+	repo.Reference.Registry = r.registry
 	if err != nil {
 		return fmt.Errorf("failed to create repository: %w", err)
 	}
