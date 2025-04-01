@@ -58,6 +58,10 @@ func (r *Runner) StartNew(fileName string) error {
 				"Authorization": []string{fmt.Sprintf("Bearer %s", r.accessToken)},
 			},
 		}
+	} else {
+		repo.Client = &auth.Client{
+			Client: http.DefaultClient,
+		}
 	}
 
 	// Download manifest and blobs concurrently
