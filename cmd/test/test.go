@@ -34,7 +34,7 @@ func main() {
 	// 2. Registry domain
 	var registry = os.Args[2]
 	// 3. Anonymous token required
-	var anonymousTokenRequired = (os.Args[3] == "true")
+	var anonymousTokenRequired = (strings.ToLower(os.Args[3]) == "true")
 	// 4. Registry endpoint (default to registry)
 	endpoint := registry
 	if len(os.Args) > 4 {
