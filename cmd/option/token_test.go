@@ -6,15 +6,24 @@ import (
 )
 
 const (
-	anonymous_registry = "anonymous_registry"
-	mocked_token       = "mocked_token"
-	invalid_registry   = "invalid_registry"
+	mocked_anonymous_registry = "anonymous_registry"
+	mocked_auth_registry      = "auth_registry"
+	mocked_invalid_registry   = "invalid_registry"
+	mocked_identity_token     = "mocked_identity_token"
+	mocked_registry_token     = "mocked_registry_token"
+	mocked_invalid_token      = "invalid_token"
 )
 
 func TestParseTokenOption(t *testing.T) {
-	getAuthToken = func(registry string) (string, error) {
-		if registry == anonymous_registry {
-			return mocked_token, nil
+	// Mocking the getAuthToken function
+	getAuthToken = func(registry string, identity_token string) (string, error) {
+		switch {
+		case registry == mocked_anonymous_registry:
+			// mock returning an anonymous registry token
+			return mocked_identity_token, nil
+		case registry == mocked_auth_registry && identity_token == mocked_identity_token:
+			// exchanged registry token
+			return mocked_registry_token, nil
 		}
 		return "", errors.New("invalid registry")
 	}
@@ -41,16 +50,16 @@ func TestParseTokenOption(t *testing.T) {
 			name: "Valid anonymous option, valid registry",
 			args: args{
 				tokenOption: "anonymous",
-				registry:    anonymous_registry,
+				registry:    mocked_anonymous_registry,
 			},
-			want:    mocked_token,
+			want:    mocked_identity_token,
 			wantErr: false,
 		},
 		{
 			name: "Valid anonymous option, invalid registry",
 			args: args{
 				tokenOption: "anonymous",
-				registry:    invalid_registry,
+				registry:    mocked_invalid_registry,
 			},
 			want:    "",
 			wantErr: true,
@@ -65,18 +74,19 @@ func TestParseTokenOption(t *testing.T) {
 			wantErr: true,
 		},
 		{
-			name: "Valid token option",
+			name: "Valid exchange",
 			args: args{
-				tokenOption: "token=mytoken",
-				registry:    "example.com",
+				tokenOption: "token=" + mocked_identity_token,
+				registry:    mocked_auth_registry,
 			},
-			want:    "mytoken",
+			want:    mocked_registry_token,
 			wantErr: false,
 		},
 		{
-			name: "Invalid token option",
+			name: "Invalid exchange",
 			args: args{
-				tokenOption: "invalid",
+				tokenOption: "token=" + mocked_invalid_token,
+				registry:    mocked_auth_registry,
 			},
 			want:    "",
 			wantErr: true,

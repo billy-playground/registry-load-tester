@@ -19,19 +19,15 @@ func ParseTokenOption(tokenOption string, registry string) (string, error) {
 	case tokenOption == "none":
 		return "", nil
 	case tokenOption == "anonymous":
-		token, err := getAuthToken(registry)
-		if err != nil {
-			return "", err
-		}
-		return token, nil
+		return getAuthToken(registry, "")
 	case strings.HasPrefix(tokenOption, "token="):
-		return strings.TrimPrefix(tokenOption, "token="), nil
+		return getAuthToken(registry, strings.TrimPrefix(tokenOption, "token="))
 	default:
 		return "", fmt.Errorf("invalid token option: %s", tokenOption)
 	}
 }
 
-var getAuthToken = func(registry string) (string, error) {
+var getAuthToken = func(registry string, token string) (string, error) {
 	// Get the authentication header
 	client := http.DefaultClient
 	req, err := http.NewRequest("HEAD", fmt.Sprintf("https://%s/v2/", registry), nil)
@@ -63,6 +59,9 @@ var getAuthToken = func(registry string) (string, error) {
 
 	// Get the token using native Go HTTP client
 	tokenURL := fmt.Sprintf("%s?service=%s&scope=repository:*:pull", realm, service)
+	if token != "" {
+		req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
+	}
 	req, err = http.NewRequest("GET", tokenURL, nil)
 	if err != nil {
 		return "", fmt.Errorf("failed to create token request: %v", err)
