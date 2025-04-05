@@ -7,12 +7,12 @@ This project is a load testing tool for a registry. It allows you to pre-bake wo
 Run the tool using the following command:
 
 ```bash
-go run main.go <num_instances>[=<size>/<duration>] <registry_domain> <token_mode> [<registry_endpoint>]
+go run main.go <num_instances>[=<size>/<interval>] <registry_domain> <token_mode> [<registry_endpoint>]
 ```
 
 ### Parameters
 
-- **num_instances**: Number of instances to run. Optionally, specify size or duration.
+- **num_instances**: Number of instances to run. Optionally, specify batch size and interval.
 - **registry_domain**: Domain of the registry.
 - **token_mode**: Token mode. Options:
   - `none`: No token.
