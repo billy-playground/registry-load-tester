@@ -81,17 +81,13 @@ func main() {
 	batchingEnabled := instanceOption.BatchSize > 0 && instanceOption.BatchInterval > 0
 	for i := 0; i < instanceOption.Count; i++ {
 		wg.Add(1)
-		// start at most instanceOption.BatchSize in instanceOption.BatchInterval
 		if batchingEnabled && i%instanceOption.BatchSize == 0 {
-			now := time.Now()
-			toWait := next.Sub(time.Now())
-			if toWait <= 0 {
-				next = now.Add(instanceOption.BatchInterval)
-			} else {
+			if toWait := next.Sub(time.Now()); toWait > 0 {
+				// wait for the next batch
 				time.Sleep(toWait)
 			}
+			next = time.Now().Add(instanceOption.BatchInterval)
 		}
-		fmt.Printf("[%s] Starting instance %d/%d with file %s\n", time.Now().Format("0000-00-00 00:00:00"), i+1, instanceOption.Count, files[i])
 		go func() {
 			defer wg.Done()
 			_ = testRunner.StartNew(files[i])
