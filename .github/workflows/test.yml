@@ -1,0 +1,29 @@
+name: Run Unit Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Go environment
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.23
+
+      # Install dependencies
+      - name: Install dependencies
+        run: go mod tidy
+
+      # Run unit tests
+      - name: Run tests
+        run: go test ./... -v
