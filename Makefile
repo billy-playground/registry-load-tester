@@ -1,6 +1,6 @@
 # Variables
-APP_NAME := test
-CMD_DIR := ./cmd/test
+APP_NAME := rlt
+CMD_DIR := ./cmd/rlt
 ASSETS_DIR := ./assets
 BUILD_DIR := ./bin
 GO_FILES := $(shell find . -type f -name '*.go')

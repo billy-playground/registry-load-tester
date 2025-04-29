@@ -100,13 +100,17 @@ func TestParseTokenOption(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := ParseTokenOption(tt.args.tokenOption, tt.args.registry)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("ParseTokenOption() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if got != tt.want {
-				t.Errorf("ParseTokenOption() = %v, want %v", got, tt.want)
+			token := &Token{}
+			token.SetFlag(tt.args.tokenOption)
+			err := token.Parse(tt.args.registry)
+			if tt.wantErr {
+				if err == nil {
+					t.Errorf("Parse() error = %v, wantErr %v", err, tt.wantErr)
+				}
+			} else {
+				if token.AccessToken != tt.want {
+					t.Errorf("Parse() = %v, want %v", token.AccessToken, tt.want)
+				}
 			}
 		})
 	}
