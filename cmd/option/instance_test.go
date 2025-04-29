@@ -44,68 +44,69 @@ func TestParseInstanceOption(t *testing.T) {
 		{
 			name:    "Invalid input: missing batch size and interval",
 			input:   "10=",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: missing batch size",
 			input:   "10=/2s",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: missing interval",
 			input:   "10=2/",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: non-numeric count",
 			input:   "abc=5/2s",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: non-numeric batch size",
 			input:   "10=abc/2s",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: invalid interval format",
 			input:   "10=5/abc",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: count is zero",
 			input:   "0=5/2s",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: batch size is zero",
 			input:   "10=0/2s",
-			want:    Instance{},
 			wantErr: true,
 		},
 		{
 			name:    "Invalid input: interval is zero",
 			input:   "10=5/0s",
-			want:    Instance{},
 			wantErr: true,
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := ParseInstanceOption(tt.input)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("ParseInstanceOption() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if got != tt.want {
-				t.Errorf("ParseInstanceOption() = %v, want %v", got, tt.want)
+			instance := &Instance{}
+			instance.SetFlag(tt.input)
+			err := instance.Parse()
+			if tt.wantErr {
+				if err == nil {
+					t.Errorf("Parse() error = %v, wantErr %v", err, tt.wantErr)
+				}
+			} else {
+				if instance.Count != tt.want.Count {
+					t.Errorf("Parse() Count = %v, want %v", instance.Count, tt.want.Count)
+				}
+				if instance.BatchSize != tt.want.BatchSize {
+					t.Errorf("Parse() BatchSize = %v, want %v", instance.BatchSize, tt.want.BatchSize)
+				}
+				if instance.BatchInterval != tt.want.BatchInterval {
+					t.Errorf("Parse() BatchInterval = %v, want %v", instance.BatchInterval, tt.want.BatchInterval)
+				}
 			}
 		})
 	}
