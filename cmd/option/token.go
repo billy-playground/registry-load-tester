@@ -1,11 +1,10 @@
 package option
 
 import (
-	"bytes"
-	"encoding/json"
 	"fmt"
-	"net/http"
 	"strings"
+
+	"github.com/billy-playground/registry-load-tester/internal/auth"
 )
 
 // Token represents the token option for the registry load tester.
@@ -40,86 +39,20 @@ func (t *Token) Parse(registry string) (err error) {
 	}
 }
 
-var getAuthToken = func(registry string, token string) (string, error) {
-	// Get the authentication header
-	client := http.DefaultClient
-	req, err := http.NewRequest("HEAD", fmt.Sprintf("https://%s/v2/", registry), nil)
+var getAuthToken = func(registry string, refreshToken string) (string, error) {
+	authHeader, err := auth.GetAuthHeader(registry)
 	if err != nil {
-		return "", fmt.Errorf("failed to create request: %v", err)
+		return "", err
 	}
 
-	resp, err := client.Do(req)
-	if err != nil {
-		return "", fmt.Errorf("failed to perform request: %v", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusUnauthorized {
-		return "", fmt.Errorf("unexpected status code: %d", resp.StatusCode)
-	}
-
-	authHeader := resp.Header.Get("Www-Authenticate")
 	if authHeader == "" {
-		return "", fmt.Errorf("auth header not found")
+		// no access token obtained since the registry requires no authN at all
+		return "", nil
 	}
-
-	// Parse the realm and service from the auth header
-	realm := parseChallenge(authHeader, "realm")
-	service := parseChallenge(authHeader, "service")
-	if realm == "" || service == "" {
-		return "", fmt.Errorf("failed to parse realm or service from auth header")
-	}
-
-	// Get the token using native Go HTTP client
-	tokenURL := fmt.Sprintf("%s?service=%s&scope=repository:*:pull", realm, service)
-	if token != "" {
-		req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
-	}
-	req, err = http.NewRequest("GET", tokenURL, nil)
+	realm, service, err := auth.ParseRealmAndService(authHeader)
 	if err != nil {
-		return "", fmt.Errorf("failed to create token request: %v", err)
+		return "", err
 	}
 
-	resp, err = client.Do(req)
-	if err != nil {
-		return "", fmt.Errorf("failed to perform token request: %v", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("unexpected status code while fetching token: %d", resp.StatusCode)
-	}
-
-	var buf bytes.Buffer
-	if _, err := buf.ReadFrom(resp.Body); err != nil {
-		return "", fmt.Errorf("failed to read token response body: %v", err)
-	}
-
-	var result map[string]interface{}
-	if err := json.Unmarshal(buf.Bytes(), &result); err != nil {
-		return "", fmt.Errorf("failed to parse token response JSON: %v", err)
-	}
-
-	token, ok := result["access_token"].(string)
-	if !ok {
-		return "", fmt.Errorf("access_token not found or invalid in response")
-	}
-	return token, nil
-}
-
-// parseChallenge extracts the value of a specific key from the WWW-Authenticate header
-// It assumes the format is "key=value" and that the value is enclosed in double quotes.
-// It returns an empty string if the key is not found or if the value is not properly formatted.
-func parseChallenge(header, key string) string {
-	prefix := fmt.Sprintf(`%s="`, key)
-	start := strings.Index(header, prefix)
-	if start == -1 {
-		return ""
-	}
-	start += len(prefix)
-	end := strings.Index(header[start:], `"`)
-	if end == -1 {
-		return ""
-	}
-	return header[start : start+end]
+	return auth.ExchangeToken(realm, service, refreshToken)
 }

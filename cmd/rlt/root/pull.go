@@ -14,7 +14,8 @@ import (
 
 type pullOptions struct {
 	option.Instance
-	option.Pull
+	option.Registry
+	option.Token
 }
 
 func pullCmd() *cobra.Command {
@@ -22,19 +23,23 @@ func pullCmd() *cobra.Command {
 
 	pullCmd := &cobra.Command{
 		Use:   "pull  <num_instances>[=<size>/<duration>] <registry_domain> <token_mode>",
-		Short: "Registry Load Tester",
-		Long:  "A tool to test the load on a registry by running multiple instances.",
+		Short: "pull from a registry",
+		Long:  "run pull workloads simultaneously with customized options",
 		Args:  cobra.MinimumNArgs(3),
 		PreRunE: func(cmd *cobra.Command, args []string) error {
 			// Setup arguments
 			opts.Instance.SetFlag(args[0])
-			opts.Pull.SetFlag(args[1], args[2])
+			opts.Registry.SetFlag(args[1])
+			opts.Token.SetFlag(args[2])
 
 			// Parse options
 			if err := opts.Instance.Parse(); err != nil {
 				return fmt.Errorf("Error parsing instance option: %v\n", err)
 			}
-			return opts.Pull.Parse()
+			if err := opts.Registry.Parse(); err != nil {
+				return fmt.Errorf("Error parsing registry option: %v\n", err)
+			}
+			return opts.Token.Parse(opts.Registry.RegistryDomain)
 		},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runPull(opts)
@@ -66,7 +71,7 @@ func runPull(opts pullOptions) error {
 	start := time.Now()
 	next := start
 	var wg sync.WaitGroup
-	testRunner := runner.NewRunner(opts.Token.AccessToken, opts.RegistryDomain)
+	testRunner := runner.NewPullRunner(opts.Token.AccessToken, opts.RegistryDomain)
 	batchingEnabled := opts.BatchSize > 0 && opts.BatchInterval > 0
 	for i := 0; i < opts.Count; i++ {
 		wg.Add(1)
