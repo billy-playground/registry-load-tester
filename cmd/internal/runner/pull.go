@@ -19,22 +19,22 @@ import (
 	"github.com/billy-playground/registry-load-tester/cmd/internal/image"
 )
 
-// Runner can be used to start a new test instance to download blobs and manifests.
-type Runner struct {
+// PullRunner can be used to start a new test instance to download blobs and manifests.
+type PullRunner struct {
 	accessToken string
 	registry    string
 }
 
 // It takes a JSON file as input and downloads the blobs and manifests specified in the file.
-func NewRunner(accessToken string, registry string) *Runner {
-	return &Runner{
+func NewPullRunner(accessToken string, registry string) *PullRunner {
+	return &PullRunner{
 		accessToken: accessToken,
 		registry:    registry,
 	}
 }
 
 // StartNew starts a new test instance to download blobs and manifests.
-func (r *Runner) StartNew(fileName string) error {
+func (r *PullRunner) StartNew(fileName string) error {
 	// Parse JSON file
 	data, err := parseJSON(fileName)
 	if err != nil {
