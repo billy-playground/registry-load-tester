@@ -24,8 +24,23 @@ func pullCmd() *cobra.Command {
 	pullCmd := &cobra.Command{
 		Use:   "pull  <num_instances>[=<size>/<duration>] <registry_domain> <token_mode>",
 		Short: "pull from a registry",
-		Long:  "run pull workloads simultaneously with customized options",
-		Args:  cobra.MinimumNArgs(3),
+		Long: `run pull workloads simultaneously with customized options
+
+Example - pull 10 images against registry.example.com without using any token.
+  rlt pull 10 registry.example.com none
+Example - pull 100 images against registry.example.com, starting 10 instances every 500 milliseconds using the specified token.
+  rlt 100=10/500ms registry.example.com token=$registry_token
+
+Example - pull 50 images against registry.example.com using shared anonymous access.
+  rlt 50 registry.example.com anonymous
+
+Example - pull 20 images against registry.example.com via a custom endpoint -e cus.fe.example.com.
+  rlt 20 registry.example.com none cus.fe.example.com
+
+Example - pull 20 images against registry.example.com via a customize IP 192.168.1.1.
+  rlt 20 registry.example.com none cus.fe.example.com -e 192.168.1.1
+`,
+		Args: cobra.MinimumNArgs(3),
 		PreRunE: func(cmd *cobra.Command, args []string) error {
 			// Setup arguments
 			opts.Instance.SetFlag(args[0])
