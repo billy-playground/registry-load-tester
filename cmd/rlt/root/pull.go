@@ -28,6 +28,7 @@ func pullCmd() *cobra.Command {
 
 Example - pull 10 images against registry.example.com without using any token.
   rlt pull 10 registry.example.com none
+
 Example - pull 100 images against registry.example.com, starting 10 instances every 500 milliseconds using the specified token.
   rlt 100=10/500ms registry.example.com token=$registry_token
 
@@ -35,10 +36,10 @@ Example - pull 50 images against registry.example.com using shared anonymous acc
   rlt 50 registry.example.com anonymous
 
 Example - pull 20 images against registry.example.com via a custom endpoint -e cus.fe.example.com.
-  rlt 20 registry.example.com none cus.fe.example.com
+  rlt 20 registry.example.com none -e cus.fe.example.com
 
 Example - pull 20 images against registry.example.com via a customize IP 192.168.1.1.
-  rlt 20 registry.example.com none cus.fe.example.com -e 192.168.1.1
+  rlt 20 registry.example.com none -e 192.168.1.1
 `,
 		Args: cobra.MinimumNArgs(3),
 		PreRunE: func(cmd *cobra.Command, args []string) error {

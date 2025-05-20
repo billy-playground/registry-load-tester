@@ -27,8 +27,10 @@ func authCmd() *cobra.Command {
 
 Example - authenticate 10 images against registry.example.com without using any token.
   rlt auth 10 registry.example.com
+
 Example - authenticate 100 images against registry.example.com, starting 10 instances every 500 milliseconds using the specified token.
   rlt auth 100=10/500ms registry.example.com --refresh-token=$registry_token
+
 Example - authenticate 20 images against registry.example.com via a custom endpoint -e cus.fe.example.com.
   rlt auth 20 registry.example.com none -e cus.fe.example.com
 `,
